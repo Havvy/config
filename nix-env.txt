@@ -1,0 +1,11 @@
+exa-0.8.0
+firefox-bin-57.0.2
+git-minimal-2.15.1
+ncdu-1.13
+nix-prefetch-git
+nix-repl-1.11.15-2016-02-28
+nodejs-6.11.5
+ripgrep-0.7.1
+sublimetext3-3143
+unzip-6.0
+yakuake-3.0.4
