@@ -1,0 +1,781 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Ref",
+				"RefCell"
+			],
+			[
+				"set_",
+				"set_parent_opt"
+			],
+			[
+				"set_p",
+				"set_parent_opt"
+			],
+			[
+				"do",
+				"downgrade"
+			],
+			[
+				"B",
+				"Breakpoint"
+			],
+			[
+				"new_",
+				"new_from_component"
+			],
+			[
+				"tree",
+				"tree_component"
+			],
+			[
+				"Arc",
+				"ArcTreeComponent"
+			],
+			[
+				"ArcT",
+				"ArcTreeComponent"
+			],
+			[
+				"circ",
+				"circle_event"
+			],
+			[
+				"cir",
+				"circle_event"
+			],
+			[
+				"get_",
+				"get_arc_above_site_mut"
+			],
+			[
+				"Qu",
+				"QuadraticParabola"
+			],
+			[
+				"Q",
+				"QuadraticParabola"
+			],
+			[
+				"disc",
+				"discriminant_root"
+			],
+			[
+				"para",
+				"parabola_at_sweepline"
+			],
+			[
+				"Di",
+				"FocusDirectrixParabola"
+			],
+			[
+				"Fo",
+				"FocusDirectrixParabola"
+			],
+			[
+				"N",
+				"NotNaN"
+			],
+			[
+				"breakp",
+				"breakpoint"
+			],
+			[
+				"sweep",
+				"sweep_location"
+			],
+			[
+				"swee",
+				"sweep_location"
+			],
+			[
+				"break",
+				"breakpoint"
+			],
+			[
+				"is_",
+				"is_node_cyclic"
+			],
+			[
+				"cur",
+				"current_node_index"
+			],
+			[
+				"all_",
+				"all_edges_enumerated"
+			],
+			[
+				"enu",
+				"enumerate"
+			],
+			[
+				"Node",
+				"NodeIndex"
+			],
+			[
+				"Nod",
+				"NodeIndex"
+			],
+			[
+				"is_C",
+				"is_cyclic_node"
+			],
+			[
+				"tar",
+				"target_idx"
+			],
+			[
+				"loop",
+				"loop_block_ast_ids"
+			],
+			[
+				"loop_bl",
+				"loop_block_cfgs"
+			],
+			[
+				"loop_block",
+				"loop_block_ast_id"
+			],
+			[
+				"cfg_",
+				"cfg_node_ast_id"
+			],
+			[
+				"loop_block_",
+				"loop_block_ast_ids"
+			],
+			[
+				"iteration",
+				"iteration_recur_count"
+			],
+			[
+				"ExprAs",
+				"ExprAssignOp"
+			],
+			[
+				"va",
+				"value_expr"
+			],
+			[
+				"of_",
+				"of_expr"
+			],
+			[
+				"mat",
+				"match_arms"
+			],
+			[
+				"of_e",
+				"of_expr"
+			],
+			[
+				"of_ex",
+				"of_exprs"
+			],
+			[
+				"pre",
+				"predicate_expr"
+			],
+			[
+				"ele",
+				"element_exprs"
+			],
+			[
+				"cons",
+				"consequent_block"
+			],
+			[
+				"Loo",
+				"LoopBehaviour"
+			],
+			[
+				"Stm",
+				"StmtDecl"
+			],
+			[
+				"expr_",
+				"expr_unconditionally_exits_loop"
+			],
+			[
+				"inn",
+				"inner_expr"
+			],
+			[
+				"Stmt",
+				"StmtExpr"
+			],
+			[
+				"span_s",
+				"span_single_loop_iteration_lint"
+			],
+			[
+				"SINGLE",
+				"LOOP_SINGLE_ITERATION"
+			],
+			[
+				"span_",
+				"span_lint"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/havvy/workspace/voroni/src/voronoi_map.rs",
+			"settings":
+			{
+				"buffer_size": 20615,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/voroni/src/voronoi_tree.rs",
+			"settings":
+			{
+				"buffer_size": 17847,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/voroni/src/geometry.rs",
+			"settings":
+			{
+				"buffer_size": 19083,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/voroni/src/lib.rs",
+			"settings":
+			{
+				"buffer_size": 2680,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n#include \"Voronoi.h\"\n#include <iostream>\n#include <algorithm>\n#include <set>\n\nusing namespace vor;\n\nVoronoi::Voronoi()\n{\n\tedges = 0;\n}\n\nEdges * Voronoi::GetEdges(Vertices * v, int w, int h)\n{\n\tplaces = v;\n\twidth = w;\n\theight = h;\n\troot = 0;\n\n\tif(!edges) edges = new Edges();\n\telse \n\t{\n\t\tfor(Vertices::iterator\ti = points.begin(); i != points.end(); ++i) delete (*i);\n\t\tfor(Edges::iterator\t\ti = edges->begin(); i != edges->end(); ++i) delete (*i);\n\t\tpoints.clear();\n\t\tedges->clear();\n\t}\n\t\n\tfor(Vertices::iterator i = places->begin(); i!=places->end(); ++i)\n\t{\n\t\tqueue.push(new VEvent( *i, true));\n\t}\n\n\tVEvent * e;\n\twhile(!queue.empty())\n\t{\n\t\te = queue.top();\n\t\tqueue.pop();\n\t\tly = e->point->y;\n\t\tif(deleted.find(e) != deleted.end()) { delete(e); deleted.erase(e); continue;}\n\t\tif(e->pe) InsertParabola(e->point);\n\t\telse RemoveParabola(e);\n\t\tdelete(e);\n\t}\n\t\n\tFinishEdge(root);\n\n\tfor(Edges::iterator i = edges->begin(); i != edges->end(); ++i)\n\t{\n\t\tif( (*i)->neighbour) \n\t\t{\n\t\t\t(*i)->start = (*i)->neighbour->end;\n\t\t\tdelete (*i)->neighbour;\n\t\t}\n\t}\n\t\n\treturn edges;\n}\n\nvoid\tVoronoi::InsertParabola(VPoint * p)\n{\n\tif(!root){root = new VParabola(p); return;}\n\n\tif(root->isLeaf && root->site->y - p->y < 1) // degenerovaný pøípad - obì spodní místa ve stejné výšce\n\t{\n\t\tVPoint * fp = root->site;\n\t\troot->isLeaf = false;\n\t\troot->SetLeft( new VParabola(fp) );\n\t\troot->SetRight(new VParabola(p)  );\n\t\tVPoint * s = new VPoint((p->x + fp->x)/2, height); // zaèátek hrany uprostøed míst\n\t\tpoints.push_back(s);\n\t\tif(p->x > fp->x) root->edge = new VEdge(s, fp, p); // rozhodnu, který vlevo, který vpravo\n\t\telse root->edge = new VEdge(s, p, fp);\n\t\tedges->push_back(root->edge);\n\t\treturn;\n\t}\n\n\tVParabola * par = GetParabolaByX(p->x);\n\t\n\tif(par->cEvent)\n\t{\n\t\tdeleted.insert(par->cEvent);\n\t\tpar->cEvent = 0;\n\t}\n\t\n\tVPoint * start = new VPoint(p->x, GetY(par->site, p->x));\n\tpoints.push_back(start);\n\n\tVEdge * el = new VEdge(start, par->site, p);\n\tVEdge * er = new VEdge(start, p, par->site);\n\n\tel->neighbour = er;\n\tedges->push_back(el);\n\n\t// pøestavuju strom .. vkládám novou parabolu\n\tpar->edge = er;\n\tpar->isLeaf = false;\n\n\tVParabola * p0 = new VParabola(par->site);\n\tVParabola * p1 = new VParabola(p);\n\tVParabola * p2 = new VParabola(par->site);\n\n\tpar->SetRight(p2);\n\tpar->SetLeft(new VParabola());\n\tpar->Left()->edge = el;\n\n\tpar->Left()->SetLeft(p0);\n\tpar->Left()->SetRight(p1);\n\t\n\tCheckCircle(p0);\n\tCheckCircle(p2);\n}\n\nvoid\tVoronoi::RemoveParabola(VEvent * e)\n{\n\tVParabola * p1 = e->arch;\n\n\tVParabola * xl = VParabola::GetLeftParent(p1);\n\tVParabola * xr = VParabola::GetRightParent(p1);\n\n\tVParabola * p0 = VParabola::GetLeftChild(xl);\n\tVParabola * p2 = VParabola::GetRightChild(xr);\n\n\tif(p0 == p2) std::cout << \"chyba - pravá a levá parabola má stejné ohnisko!\\n\";\n\n\tif(p0->cEvent){ deleted.insert(p0->cEvent); p0->cEvent = 0; }\n\tif(p2->cEvent){ deleted.insert(p2->cEvent); p2->cEvent = 0; }\n\n\tVPoint * p = new VPoint(e->point->x, GetY(p1->site, e->point->x));\n\tpoints.push_back(p);\n\n\txl->edge->end = p;\n\txr->edge->end = p;\n\t\n\tVParabola * higher;\n\tVParabola * par = p1;\n\twhile(par != root)\n\t{\n\t\tpar = par->parent;\n\t\tif(par == xl) higher = xl;\n\t\tif(par == xr) higher = xr;\n\t}\n\thigher->edge = new VEdge(p, p0->site, p2->site);\n\tedges->push_back(higher->edge);\n\n\tVParabola * gparent = p1->parent->parent;\n\tif(p1->parent->Left() == p1)\n\t{\n\t\tif(gparent->Left()  == p1->parent) gparent->SetLeft ( p1->parent->Right() );\n\t\tif(gparent->Right() == p1->parent) gparent->SetRight( p1->parent->Right() );\n\t}\n\telse\n\t{\n\t\tif(gparent->Left()  == p1->parent) gparent->SetLeft ( p1->parent->Left()  );\n\t\tif(gparent->Right() == p1->parent) gparent->SetRight( p1->parent->Left()  );\n\t}\n\n\tdelete p1->parent;\n\tdelete p1;\n\n\tCheckCircle(p0);\n\tCheckCircle(p2);\n}\n\nvoid\tVoronoi::FinishEdge(VParabola * n)\n{\n\tif(n->isLeaf) {delete n; return;}\n\tdouble mx;\n\tif(n->edge->direction->x > 0.0)\tmx = std::max(width,\tn->edge->start->x + 10 );\n\telse\t\t\t\t\t\t\tmx = std::min(0.0,\t\tn->edge->start->x - 10);\n\t\n\tVPoint * end = new VPoint(mx, mx * n->edge->f + n->edge->g); \n\tn->edge->end = end;\n\tpoints.push_back(end);\n\t\t\t\n\tFinishEdge(n->Left() );\n\tFinishEdge(n->Right());\n\tdelete n;\n}\n\ndouble\tVoronoi::GetY(VPoint * p, double x) // ohnisko, x-souøadnice\n{\n\tdouble dp = 2 * (p->y - ly);\n\tdouble a1 = 1 / dp;\n\tdouble b1 = -2 * p->x / dp;\n\tdouble c1 = ly + dp / 4 + p->x * p->x / dp;\n\t\n\treturn(a1*x*x + b1*x + c1);\n}\n\nvoid\tVoronoi::CheckCircle(VParabola * b)\n{\n\tVParabola * lp = VParabola::GetLeftParent (b);\n\tVParabola * rp = VParabola::GetRightParent(b);\n\n\tVParabola * a  = VParabola::GetLeftChild (lp);\n\tVParabola * c  = VParabola::GetRightChild(rp);\n\n\tif(!a || !c || a->site == c->site) return;\n\n\tVPoint * s = 0;\n\ts = GetEdgeIntersection(lp->edge, rp->edge);\n\tif(s == 0) return;\n\n\tdouble dx = a->site->x - s->x;\n\tdouble dy = a->site->y - s->y;\n\n\tdouble d = std::sqrt( (dx * dx) + (dy * dy) );\n\n\tif(s->y - d >= ly) { return;}\n\n\tVEvent * e = new VEvent(new VPoint(s->x, s->y - d), false);\n\tpoints.push_back(e->point);\n\tb->cEvent = e;\n\te->arch = b;\n\tqueue.push(e);\n}\n\nVPoint * Voronoi::GetEdgeIntersection(VEdge * a, VEdge * b)\n{\n\tdouble x = (b->g-a->g) / (a->f - b->f);\n\tdouble y = a->f * x + a->g;\n\n\tif((x - a->start->x)/a->direction->x < 0) return 0;\n\tif((y - a->start->y)/a->direction->y < 0) return 0;\n\t\t\n\tif((x - b->start->x)/b->direction->x < 0) return 0;\n\tif((y - b->start->y)/b->direction->y < 0) return 0;\t\n\n\tVPoint * p = new VPoint(x, y);\t\t\n\tpoints.push_back(p);\n\treturn p;\n}\n\n\n\t",
+			"file": "/home/havvy/scratchspace/voronoi/source/Voronoi.cpp",
+			"file_size": 6749,
+			"file_write_time": 129439609720000000,
+			"settings":
+			{
+				"buffer_size": 5431,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/havvy/scratchspace/voronoi/source/Voronoi.h",
+			"settings":
+			{
+				"buffer_size": 2552,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/havvy/scratchspace/voronoi/source/VParabola.h",
+			"settings":
+			{
+				"buffer_size": 2137,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "#include \"VParabola.h\"\n#include \"VPoint.h\"\n\n/*\n\tConstructors\n*/\n\nVParabola::VParabola()\n{\n\tsite\t= 0;\n\tisLeaf\t= false;\n\tcEvent\t= 0;\n\tedge\t= 0;\n\tparent\t= 0;\n}\n\nVParabola::VParabola(VPoint * s)\n{\n\tsite\t= s; \n\tisLeaf\t= true;\n\tcEvent\t= 0;\n\tedge\t= 0;\n\tparent\t= 0;\n}\n\n/*\n\tTree operations (described in the header file)\n*/\n\nVParabola * VParabola::GetLeft\t\t\t(VParabola * p)\n{\n\treturn GetLeftChild(GetLeftParent(p));\n}\n\n\nVParabola * VParabola::GetRight\t\t\t(VParabola * p)\n{\n\treturn GetRightChild(GetRightParent(p));\n}\n\nfn VParabola::GetLeftParent(p: &VParabola) -> &VParabola {\n\tVParabola *par\t\t= p->parent;\n\tVParabola *pLast\t= p;\n\twhile(par->Left() == pLast) { \n\t\tif(!par->parent) return None;\n\t\tpLast = par; \n\t\tpar = par->parent; \n\t}\n\treturn Some(par);\n}\n\nVParabola * VParabola::GetRightParent\t(VParabola * p)\n{\n\tVParabola * par\t\t= p->parent;\n\tVParabola * pLast\t= p;\n\twhile(par->Right() == pLast) \n\t{ \n\t\tif(!par->parent) return 0;\n\t\tpLast = par; par = par->parent; \n\t}\n\treturn par;\n}\n\nVParabola * VParabola::GetLeftChild\t\t(VParabola * p)\n{\n\tif(!p) return 0;\n\tVParabola * par = p->Left();\n\twhile(!par->isLeaf) par = par->Right();\n\treturn par;\n}\n\nVParabola * VParabola::GetRightChild\t(VParabola * p)\n{\n\tif(!p) return 0;\n\tVParabola * par = p->Right();\n\twhile(!par->isLeaf) par = par->Left();\n\treturn par;\n}\n",
+			"file": "/home/havvy/scratchspace/voronoi/source/VParabola.cpp",
+			"file_size": 1366,
+			"file_write_time": 129439598640000000,
+			"settings":
+			{
+				"buffer_size": 1295,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"enabl",
+				"Package Control: Enable Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"JSON",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"JS",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"Package Control: I",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 401.0
+	},
+	"console":
+	{
+		"height": 370.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			" import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/havvy/workspace/voroni",
+		"/home/havvy/workspace/voroni/src"
+	],
+	"file_history":
+	[
+		"/home/havvy/.ssh/known_hosts",
+		"/home/havvy/scratchspace/voronoi/source/VEvent.h",
+		"/home/havvy/scratchspace/voronoi/source/main.cpp",
+		"/home/havvy/.nixpkgs/mozilla/rust-overlay-2.nix",
+		"/home/havvy/.nixpkgs/mozilla/lib/parseTOML.nix",
+		"/home/havvy/.nixpkgs/shell/rust-emscripten.nix",
+		"/home/havvy/scratchspace/hello-rust.rs",
+		"/home/havvy/scratchspace/hello-rust.js",
+		"/home/havvy/scratchspace/hello-rust.html",
+		"/home/havvy/scratchspace/hello-rust.",
+		"/home/havvy/.bashrc",
+		"/home/havvy/.nixpkgs/rust-nightly.nix",
+		"/nix/store/fr5r3vgdg81zi016mjzvpxcsvkpmlf8w-nixpkgs-17.03pre99866.92a3ecf/nixpkgs/pkgs/build-support/trivial-builders.nix",
+		"/home/havvy/workspace/bots/heartless/config/rust.json",
+		"/nix/store/kjakniy59pcs47nn425n7hjpj31918d8-nixos-16.09.846.0195ab8/nixos/default.nix",
+		"/nix/store/kjakniy59pcs47nn425n7hjpj31918d8-nixos-16.09.846.0195ab8/nixos/README.md",
+		"/home/havvy/scratchspace/five/mix.exs",
+		"/home/havvy/scratchspace/five/lib/five.ex",
+		"/home/havvy/scratchspace/five.exs",
+		"/home/havvy/out.txt",
+		"/home/havvy/workspace/rust/build.txt",
+		"/home/havvy/workspace/rust/Makefile",
+		"/home/havvy/.nixpkgs/shell/rust.nix",
+		"/home/havvy/.nixpkgs/config.nix",
+		"/home/havvy/workspace/clippy/clippy_lints/src/utils/mod.rs",
+		"/home/havvy/workspace/clippy/clippy_lints/Cargo.toml",
+		"/home/havvy/workspace/clippy/clippy_lints/src/doc.rs",
+		"/home/havvy/workspace/clippy/tests/compile-fail/unused_labels.rs",
+		"/home/havvy/workspace/clippy/tests/compile-fail/while_loop.rs",
+		"/home/havvy/workspace/clippy/clippy_lints/src/utils/higher.rs",
+		"/home/havvy/workspace/clippy/tests/compile-fail/absurd-extreme-comparisons.rs",
+		"/home/havvy/.gitignore",
+		"/home/havvy/workspace/rust-nightly-nix/README.md",
+		"/home/havvy/.ssh/id_rsa.pub"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"check",
+			"CheckCircle",
+			"parabola_at_sweep_location",
+			"with_arc_above_site_mut",
+			"get_left_arc",
+			"CheckCircle",
+			"GetLeftChild",
+			"'sl",
+			"<'sl>",
+			"GetParabolaByX",
+			"sweep_location"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/havvy/workspace/voroni/src/voronoi_map.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7968,
+								7968
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rust/Rust.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3647.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/havvy/workspace/voroni/src/voronoi_tree.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17847,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								583,
+								583
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rust/Rust.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/havvy/workspace/voroni/src/geometry.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19083,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13040,
+								13040
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rust/Rust.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7618.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/havvy/workspace/voroni/src/lib.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2680,
+								2680
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rust/Rust.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1134.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/havvy/scratchspace/voronoi/source/Voronoi.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5431,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4462,
+								4464
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3226.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/havvy/scratchspace/voronoi/source/Voronoi.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2013,
+								2027
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 204.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/havvy/scratchspace/voronoi/source/VParabola.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								759,
+								759
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 48.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/havvy/scratchspace/voronoi/source/VParabola.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1295,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								774,
+								774
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 594.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 54.0
+	},
+	"input":
+	{
+		"height": 54.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "voroni.sublime-project",
+	"replace":
+	{
+		"height": 104.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 207.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

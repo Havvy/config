@@ -1,0 +1,690 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"iter",
+				"itertools"
+			],
+			[
+				"cir",
+				"circumscribes_point"
+			],
+			[
+				"ci",
+				"circumscribes_point"
+			],
+			[
+				"bis",
+				"bisector_2"
+			],
+			[
+				"bise",
+				"bisector_1"
+			],
+			[
+				"circ",
+				"circumscribes_point"
+			],
+			[
+				"Tri",
+				"TriangleMesh"
+			],
+			[
+				"Non",
+				"NotNaN"
+			],
+			[
+				"bower_",
+				"bower_watch_with_super_triangle"
+			],
+			[
+				"sh",
+				"shares_vertex"
+			],
+			[
+				"No",
+				"NotNaN"
+			],
+			[
+				"super_t",
+				"super_triangle"
+			],
+			[
+				"num",
+				"numerator_y_sub"
+			],
+			[
+				"nu",
+				"numerator_y_add"
+			],
+			[
+				"denom",
+				"denominator"
+			],
+			[
+				"den",
+				"denominator_sub"
+			],
+			[
+				"bi",
+				"bisector_2"
+			],
+			[
+				"tr",
+				"triangle"
+			],
+			[
+				"self",
+				"self"
+			],
+			[
+				"super_tri",
+				"super_triangle_of"
+			],
+			[
+				"tria",
+				"triangulation"
+			],
+			[
+				"triple",
+				"triple_element_two_same"
+			],
+			[
+				"doubl",
+				"double_element_distinct"
+			],
+			[
+				"uni",
+				"unique_elements_only"
+			],
+			[
+				"un",
+				"unique_elements_only"
+			],
+			[
+				"is_",
+				"is_node_cyclic"
+			],
+			[
+				"cur",
+				"current_node_index"
+			],
+			[
+				"all_",
+				"all_edges_enumerated"
+			],
+			[
+				"enu",
+				"enumerate"
+			],
+			[
+				"Node",
+				"NodeIndex"
+			],
+			[
+				"Nod",
+				"NodeIndex"
+			],
+			[
+				"is_C",
+				"is_cyclic_node"
+			],
+			[
+				"tar",
+				"target_idx"
+			],
+			[
+				"loop",
+				"loop_block_ast_ids"
+			],
+			[
+				"loop_bl",
+				"loop_block_cfgs"
+			],
+			[
+				"loop_block",
+				"loop_block_ast_id"
+			],
+			[
+				"cfg_",
+				"cfg_node_ast_id"
+			],
+			[
+				"loop_block_",
+				"loop_block_ast_ids"
+			],
+			[
+				"iteration",
+				"iteration_recur_count"
+			],
+			[
+				"ExprAs",
+				"ExprAssignOp"
+			],
+			[
+				"va",
+				"value_expr"
+			],
+			[
+				"of_",
+				"of_expr"
+			],
+			[
+				"mat",
+				"match_arms"
+			],
+			[
+				"of_e",
+				"of_expr"
+			],
+			[
+				"of_ex",
+				"of_exprs"
+			],
+			[
+				"pre",
+				"predicate_expr"
+			],
+			[
+				"ele",
+				"element_exprs"
+			],
+			[
+				"cons",
+				"consequent_block"
+			],
+			[
+				"Loo",
+				"LoopBehaviour"
+			],
+			[
+				"Stm",
+				"StmtDecl"
+			],
+			[
+				"expr_",
+				"expr_unconditionally_exits_loop"
+			],
+			[
+				"inn",
+				"inner_expr"
+			],
+			[
+				"Stmt",
+				"StmtExpr"
+			],
+			[
+				"span_s",
+				"span_single_loop_iteration_lint"
+			],
+			[
+				"SINGLE",
+				"LOOP_SINGLE_ITERATION"
+			],
+			[
+				"span_",
+				"span_lint"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/havvy/workspace/rust/reference/src/glossary.md",
+			"settings":
+			{
+				"buffer_size": 4785,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/rust/reference/src/items/implementations.md",
+			"settings":
+			{
+				"buffer_size": 4220,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"enabl",
+				"Package Control: Enable Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"JSON",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"JS",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"Package Control: I",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 413.0
+	},
+	"console":
+	{
+		"height": 370.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			" import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/havvy/workspace/rust/reference",
+		"/home/havvy/workspace/rust/reference/src",
+		"/home/havvy/workspace/rust/reference/src/expressions",
+		"/home/havvy/workspace/rust/reference/src/items",
+		"/home/havvy/workspace/rust/reference/theme"
+	],
+	"file_history":
+	[
+		"/home/havvy/workspace/rust/reference/src/paths.md",
+		"/home/havvy/workspace/rust/reference/src/statements.md",
+		"/home/havvy/workspace/rust/reference/src/expressions/operator-expr.md",
+		"/home/havvy/workspace/rust/reference/src/types.md",
+		"/home/havvy/workspace/rust/reference/src/expressions.md",
+		"/home/havvy/workspace/rust/reference/src/items/static-items.md",
+		"/home/havvy/workspace/rust/reference/src/interior-mutability.md",
+		"/home/havvy/workspace/rust/reference/src/items/enumerations.md",
+		"/home/havvy/workspace/rust/reference/src/expressions/path-expr.md",
+		"/home/havvy/workspace/rust/reference/src/items/implementations.md",
+		"/home/havvy/workspace/rust/reference/src/glossary.md",
+		"/home/havvy/workspace/rust/reference/src/type-layout.md",
+		"/home/havvy/workspace/rust/reference/src/items/traits.md",
+		"/home/havvy/workspace/rust/reference/src/expressions/call-expr.md",
+		"/home/havvy/workspace/rust/reference/src/expressions/struct-expr.md",
+		"/home/havvy/scratchspace/reference.txt",
+		"/home/havvy/workspace/rust/reference/src/attributes.md",
+		"/home/havvy/workspace/rust/reference/src/type-system.md",
+		"/home/havvy/workspace/rust/reference/src/expressions/field-expr.md",
+		"/home/havvy/workspace/rust/reference/src/expressions/block-expr.md",
+		"/home/havvy/workspace/rust/reference/src/expressions/match-expr.md",
+		"/home/havvy/workspace/rust/reference/src/special-types-and-traits.md",
+		"/home/havvy/workspace/rust/reference/src/items/constant-items.md",
+		"/home/havvy/workspace/rust/reference/src/dynamically-sized-types.md",
+		"/home/havvy/workspace/rust/reference/book.toml",
+		"/home/havvy/workspace/rust/reference/theme/header.hbs",
+		"/home/havvy/workspace/rust/reference/theme/reference.css",
+		"/home/havvy/workspace/rust/reference/theme/index.hbs",
+		"/home/havvy/workspace/rust/reference/src/theme/book.css",
+		"/home/havvy/workspace/rust/reference/src/expressions/array-expr.md",
+		"/home/havvy/workspace/rust/reference/.gitattributes",
+		"/home/havvy/workspace/rust/reference/src/introduction.md",
+		"/home/havvy/workspace/rust/reference/src/expressions/tuple-expr.md",
+		"/home/havvy/workspace/rust/reference/src/expressions/range-expr.md",
+		"/home/havvy/workspace/rust/reference/src/expressions/method-call-expr.md",
+		"/home/havvy/workspace/rust/reference/src/expressions/closure-expr.md",
+		"/home/havvy/workspace/rust/reference/src/expressions/enum-variant-expr.md",
+		"/home/havvy/workspace/rust/rust-by-example/deploy.sh",
+		"/home/havvy/workspace/rust/reference/src/SUMMARY.md",
+		"/home/havvy/workspace/rust/reference/src/type-coercions.md",
+		"/home/havvy/workspace/rust/reference/src/identifiers.md",
+		"/home/havvy/workspace/rust/reference/src/notation.md",
+		"/home/havvy/workspace/rust/reference/src/items/external-blocks.md",
+		"/home/havvy/workspace/rust/reference/src/items/extern-crates.md",
+		"/home/havvy/workspace/rust/reference/src/behavior-considered-undefined.md",
+		"/home/havvy/workspace/rust/project/config.toml",
+		"/home/havvy/workspace/rust/project/src/tools/linkchecker/main.rs",
+		"/home/havvy/workspace/rust/reference/src/procedural-macros.md",
+		"/home/havvy/workspace/rust/reference/src/macros-by-example.md",
+		"/home/havvy/workspace/rust/reference/src/macros.md",
+		"/home/havvy/workspace/rust/reference/src/string-table-productions.md",
+		"/home/havvy/workspace/rust/reference/src/unicode-productions.md",
+		"/home/havvy/workspace/rust/reference/src/glossory.md",
+		"/home/havvy/.ssh/id_rsa.pub",
+		"/home/havvy/workspace/rust/reference/src/items/use-declarations.md",
+		"/home/havvy/workspace/rust/book/second-edition/book/book.js",
+		"/home/havvy/scratchspace/index.hbs",
+		"/home/havvy/workspace/rust/book/second-edition/theme/index.hbs",
+		"/home/havvy/workspace/rust/book/second-edition/book/store.js",
+		"/home/havvy/workspace/rust/reference/src/theme/index.hbs",
+		"/home/havvy/workspace/rust/book/CONTRIBUTING.md",
+		"/home/havvy/workspace/rust/book/src/chapter_1.md",
+		"/home/havvy/workspace/rust/book/second-edition/doc-to-md.sh",
+		"/home/havvy/workspace/rust-reference/stable-check/src/main.rs",
+		"/home/havvy/workspace/rust-reference/src/items.md",
+		"/home/havvy/workspace/rust-rfcs/text/0000-use-in-impl-and-trait.md",
+		"/home/havvy/workspace/rust-rfcs/text/0000-use-in-impl-and-match.md",
+		"/home/havvy/.nixpkgs/readme.md",
+		"/home/havvy/workspace/voroni/bin/print-mesh.rs",
+		"/tmp/mozilla_havvy0/NearlyEqualsTest.java",
+		"/home/havvy/workspace/voroni/Cargo.lock",
+		"/home/havvy/.nixpkgs/shell/rust-emscripten.nix",
+		"/home/havvy/scratchspace/hello-rust.rs",
+		"/home/havvy/scratchspace/hello-rust.js",
+		"/home/havvy/scratchspace/hello-rust.html",
+		"/home/havvy/scratchspace/hello-rust.",
+		"/home/havvy/.bashrc",
+		"/home/havvy/.nixpkgs/rust-nightly.nix",
+		"/nix/store/fr5r3vgdg81zi016mjzvpxcsvkpmlf8w-nixpkgs-17.03pre99866.92a3ecf/nixpkgs/pkgs/build-support/trivial-builders.nix",
+		"/home/havvy/workspace/bots/heartless/config/rust.json",
+		"/nix/store/kjakniy59pcs47nn425n7hjpj31918d8-nixos-16.09.846.0195ab8/nixos/default.nix",
+		"/nix/store/kjakniy59pcs47nn425n7hjpj31918d8-nixos-16.09.846.0195ab8/nixos/README.md",
+		"/home/havvy/scratchspace/five/mix.exs",
+		"/home/havvy/scratchspace/five/lib/five.ex",
+		"/home/havvy/scratchspace/five.exs",
+		"/home/havvy/out.txt",
+		"/home/havvy/workspace/rust/build.txt",
+		"/home/havvy/workspace/rust/Makefile",
+		"/home/havvy/.nixpkgs/shell/rust.nix",
+		"/home/havvy/.nixpkgs/config.nix",
+		"/home/havvy/workspace/clippy/clippy_lints/src/utils/mod.rs",
+		"/home/havvy/workspace/clippy/clippy_lints/Cargo.toml",
+		"/home/havvy/workspace/clippy/clippy_lints/src/doc.rs",
+		"/home/havvy/workspace/clippy/tests/compile-fail/unused_labels.rs",
+		"/home/havvy/workspace/clippy/tests/compile-fail/while_loop.rs",
+		"/home/havvy/workspace/clippy/clippy_lints/src/utils/higher.rs",
+		"/home/havvy/workspace/clippy/tests/compile-fail/absurd-extreme-comparisons.rs",
+		"/home/havvy/.gitignore",
+		"/home/havvy/workspace/rust-nightly-nix/README.md"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"STransfer",
+			"D0S1",
+			"> ",
+			"doc",
+			"placement e",
+			"(l|r)val(ue)?",
+			"(l|r)value",
+			" $",
+			"alignment.",
+			"rvalue",
+			"lvalue",
+			"[Field]",
+			"\\r",
+			"bare",
+			"doc",
+			"target platform",
+			"^\\/\\/\\/ ",
+			"\"",
+			"- -",
+			" +$",
+			"extern-crate-declarations",
+			"diver",
+			"slope",
+			"LineSegment",
+			"unimpl",
+			"unimple",
+			"241",
+			"rhs",
+			"lhs",
+			".into_iter()",
+			"f64",
+			"34",
+			"EnumeratedNode",
+			"EnumeratedEdge",
+			"AdjacentEnumeratedEdges",
+			"Edges",
+			"all_edges_enumerated",
+			"Nodes",
+			"all_nodes_enumerated",
+			"loop_block_ast_idxs",
+			"loop_block_ast_ids",
+			"self::Lo",
+			"&Neither",
+			"530",
+			"expr_unconditionally_exits_loop",
+			"block_unconditionally_exits_loop",
+			"loop executing exactly once, doing nothing",
+			"\"variant\": \"If\"",
+			"Ret",
+			"\t",
+			"LOOP_SINGLE_ITERATION",
+			"extract_expr_from_first_stmt",
+			"\t",
+			"!()",
+			")\"\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"`",
+			"to",
+			"from",
+			"AdjacentEdges",
+			"EnumeratedEdges",
+			"enumerated_edges",
+			"EnumeratedNodes",
+			"enumerated_nodes",
+			"loop_blocks",
+			"loop_block_ast_idxs",
+			"LoopBehaviour::of_expr",
+			"LoopBehaviour::of_block",
+			"single iteration loop detected",
+			"    ",
+			"SINGLE_ITERATION_LOOP",
+			"    ",
+			"!{}"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/havvy/workspace/rust/reference/src/glossary.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4785,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2422,
+								2422
+							]
+						],
+						"settings":
+						{
+							"rulers":
+							[
+								80
+							],
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 810.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/havvy/workspace/rust/reference/src/items/implementations.md",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2173,
+								2173
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 306.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "rust-reference.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 309.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,480 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"error_numb",
+				"error_number_raw"
+			],
+			[
+				"is_C",
+				"is_cyclic_node"
+			],
+			[
+				"tar",
+				"target_idx"
+			],
+			[
+				"loop",
+				"loop_block_ast_ids"
+			],
+			[
+				"loop_bl",
+				"loop_block_cfgs"
+			],
+			[
+				"loop_block",
+				"loop_block_ast_id"
+			],
+			[
+				"cfg_",
+				"cfg_node_ast_id"
+			],
+			[
+				"loop_block_",
+				"loop_block_ast_ids"
+			],
+			[
+				"iteration",
+				"iteration_recur_count"
+			],
+			[
+				"ExprAs",
+				"ExprAssignOp"
+			],
+			[
+				"va",
+				"value_expr"
+			],
+			[
+				"of_",
+				"of_expr"
+			],
+			[
+				"mat",
+				"match_arms"
+			],
+			[
+				"of_e",
+				"of_expr"
+			],
+			[
+				"of_ex",
+				"of_exprs"
+			],
+			[
+				"pre",
+				"predicate_expr"
+			],
+			[
+				"ele",
+				"element_exprs"
+			],
+			[
+				"cons",
+				"consequent_block"
+			],
+			[
+				"Loo",
+				"LoopBehaviour"
+			],
+			[
+				"Stm",
+				"StmtDecl"
+			],
+			[
+				"expr_",
+				"expr_unconditionally_exits_loop"
+			],
+			[
+				"inn",
+				"inner_expr"
+			],
+			[
+				"Stmt",
+				"StmtExpr"
+			],
+			[
+				"span_s",
+				"span_single_loop_iteration_lint"
+			],
+			[
+				"SINGLE",
+				"LOOP_SINGLE_ITERATION"
+			],
+			[
+				"span_",
+				"span_lint"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/havvy/workspace/tennu/framework/src/plugin/ctcp.sjs",
+			"settings":
+			{
+				"buffer_size": 4566,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/tennu/framework/src/test/integration.sjs",
+			"settings":
+			{
+				"buffer_size": 11268,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/tennu/framework/package.json",
+			"settings":
+			{
+				"buffer_size": 1734,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 92.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"JSON",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"JS",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"Package Control: I",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 370.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			" import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/havvy/workspace/tennu/framework",
+		"/home/havvy/workspace/tennu/framework/src",
+		"/home/havvy/workspace/tennu/framework/src/lib",
+		"/home/havvy/workspace/tennu/framework/src/plugin",
+		"/home/havvy/workspace/tennu/framework/src/plugin/action",
+		"/home/havvy/workspace/tennu/framework/src/test"
+	],
+	"file_history":
+	[
+		"/home/havvy/workspace/tennu/framework/src/plugin/messages.sjs",
+		"/home/havvy/workspace/tennu/framework/src/plugin/commands.sjs",
+		"/home/havvy/workspace/tennu/framework/src/lib/response.sjs",
+		"/home/havvy/workspace/tennu/framework/src/test/plugin-user.sjs",
+		"/home/havvy/workspace/tennu/framework/node_modules/after-events/after-events.js",
+		"/home/havvy/workspace/tennu/framework/src/test/plugin-channel.sjs",
+		"/home/havvy/workspace/tennu/framework/src/test/plugin-action.sjs",
+		"/home/havvy/workspace/tennu/framework/src/test/message.sjs",
+		"/home/havvy/workspace/tennu/framework/src/test/client.sjs",
+		"/home/havvy/workspace/tennu/framework/tennu_plugins/ctcp.js",
+		"/home/havvy/workspace/tennu/hresult.json",
+		"/home/havvy/workspace/gald/apps/gald/critical.js",
+		"/home/havvy/workspace/clippy/clippy_lints/src/utils/mod.rs",
+		"/home/havvy/workspace/clippy/clippy_lints/Cargo.toml",
+		"/home/havvy/workspace/clippy/clippy_lints/src/doc.rs",
+		"/home/havvy/workspace/clippy/tests/compile-fail/unused_labels.rs",
+		"/home/havvy/workspace/clippy/tests/compile-fail/while_loop.rs",
+		"/home/havvy/workspace/clippy/clippy_lints/src/utils/higher.rs",
+		"/home/havvy/workspace/clippy/tests/compile-fail/absurd-extreme-comparisons.rs",
+		"/home/havvy/.gitignore",
+		"/home/havvy/.nixpkgs/rust-nightly.nix",
+		"/home/havvy/.nixpkgs/config.nix",
+		"/home/havvy/workspace/rust-nightly-nix/README.md",
+		"/home/havvy/.ssh/id_rsa.pub"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"^ \\*( |$)",
+			"    ",
+			"1136",
+			" as HRESULT",
+			"const ([A-Z0-9_]+) = [0-9xA-F]+;",
+			"const ([A-Z_]+) = [0-9A-Fx]+;",
+			"const ([AZ_]+)",
+			"u32 as HRESULT",
+			": HRESULT",
+			";",
+			"u32",
+			" as HRESULT;",
+			": HRESULT = ",
+			";",
+			": HRESULT = ",
+			"pub const ",
+			"loop_block_ast_idxs",
+			"loop_block_ast_ids",
+			"self::Lo",
+			"&Neither",
+			"530",
+			"expr_unconditionally_exits_loop",
+			"block_unconditionally_exits_loop",
+			"loop executing exactly once, doing nothing",
+			"\"variant\": \"If\"",
+			"Ret",
+			"\t",
+			"LOOP_SINGLE_ITERATION",
+			"extract_expr_from_first_stmt",
+			"\t",
+			"!()",
+			")\"\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"\"\\1\": \\1,",
+			"loop_blocks",
+			"loop_block_ast_idxs",
+			"LoopBehaviour::of_expr",
+			"LoopBehaviour::of_block",
+			"single iteration loop detected",
+			"    ",
+			"SINGLE_ITERATION_LOOP",
+			"    ",
+			"!{}"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/havvy/workspace/tennu/framework/src/plugin/ctcp.sjs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4566,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3516,
+								3516
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 931.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/havvy/workspace/tennu/framework/src/test/integration.sjs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1011,
+								1011
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/havvy/workspace/tennu/framework/package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1734,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								834,
+								834
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "tennu-framework.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
