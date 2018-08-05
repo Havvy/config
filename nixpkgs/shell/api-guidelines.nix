@@ -1,7 +1,7 @@
 with import <nixpkgs> {};
 
 stdenv.mkDerivation {
-  name = "rust-reference";
+  name = "rust-api-guidelines";
 
   shellHook = ''
     # Set some variables for the terminal prompt.
@@ -20,11 +20,11 @@ stdenv.mkDerivation {
     unset clear
 
     # Go directly to the Gald directory.
-    cd ~/workspace/rust/reference
+    cd ~/workspace/rust/api-guidelines
   '';
 
   buildInputs = [
     mdbook
-    rustChannels.nightly.rust
+    rustChannels.stable.rust
   ];
 }

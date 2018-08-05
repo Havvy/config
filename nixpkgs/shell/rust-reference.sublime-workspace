@@ -4,98 +4,6 @@
 		"selected_items":
 		[
 			[
-				"Ref",
-				"RefCell"
-			],
-			[
-				"set_",
-				"set_parent_opt"
-			],
-			[
-				"set_p",
-				"set_parent_opt"
-			],
-			[
-				"do",
-				"downgrade"
-			],
-			[
-				"B",
-				"Breakpoint"
-			],
-			[
-				"new_",
-				"new_from_component"
-			],
-			[
-				"tree",
-				"tree_component"
-			],
-			[
-				"Arc",
-				"ArcTreeComponent"
-			],
-			[
-				"ArcT",
-				"ArcTreeComponent"
-			],
-			[
-				"circ",
-				"circle_event"
-			],
-			[
-				"cir",
-				"circle_event"
-			],
-			[
-				"get_",
-				"get_arc_above_site_mut"
-			],
-			[
-				"Qu",
-				"QuadraticParabola"
-			],
-			[
-				"Q",
-				"QuadraticParabola"
-			],
-			[
-				"disc",
-				"discriminant_root"
-			],
-			[
-				"para",
-				"parabola_at_sweepline"
-			],
-			[
-				"Di",
-				"FocusDirectrixParabola"
-			],
-			[
-				"Fo",
-				"FocusDirectrixParabola"
-			],
-			[
-				"N",
-				"NotNaN"
-			],
-			[
-				"breakp",
-				"breakpoint"
-			],
-			[
-				"sweep",
-				"sweep_location"
-			],
-			[
-				"swee",
-				"sweep_location"
-			],
-			[
-				"break",
-				"breakpoint"
-			],
-			[
 				"is_",
 				"is_node_cyclic"
 			],
@@ -224,10 +132,26 @@
 	"buffers":
 	[
 		{
-			"file": "/home/havvy/workspace/voronoi/src/delaunay.rs",
+			"file": "/home/havvy/workspace/rust/reference/src/items/associated-items.md",
 			"settings":
 			{
-				"buffer_size": 4899,
+				"buffer_size": 7592,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/rust/reference/src/theme/reference.css",
+			"settings":
+			{
+				"buffer_size": 1721,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/rust/reference/src/paths.md",
+			"settings":
+			{
+				"buffer_size": 4930,
 				"line_ending": "Unix"
 			}
 		}
@@ -239,7 +163,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 170.0,
 		"last_filter": "install",
 		"selected_items":
 		[
@@ -284,7 +208,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 401.0
+		"width": 392.0
 	},
 	"console":
 	{
@@ -306,22 +230,16 @@
 	},
 	"expanded_folders":
 	[
-		"/home/havvy/workspace/voronoi",
-		"/home/havvy/workspace/voronoi/src"
+		"/home/havvy/workspace/rust/reference",
+		"/home/havvy/workspace/rust/reference/src",
+		"/home/havvy/workspace/rust/reference/src/items",
+		"/home/havvy/workspace/rust/reference/src/theme"
 	],
 	"file_history":
 	[
-		"/home/havvy/scratchspace/voronoi/source/VParabola.cpp",
-		"/home/havvy/scratchspace/voronoi/source/Voronoi.cpp",
-		"/home/havvy/workspace/voroni/src/voronoi_tree.rs",
-		"/home/havvy/workspace/voroni/src/voronoi_map.rs",
-		"/home/havvy/workspace/voroni/src/geometry.rs",
-		"/home/havvy/scratchspace/voronoi/source/VParabola.h",
-		"/home/havvy/scratchspace/voronoi/source/Voronoi.h",
-		"/home/havvy/workspace/voroni/src/lib.rs",
-		"/home/havvy/.ssh/known_hosts",
-		"/home/havvy/scratchspace/voronoi/source/VEvent.h",
-		"/home/havvy/scratchspace/voronoi/source/main.cpp",
+		"/tmp/mozilla_havvy0/channel-rust-beta.toml",
+		"/home/havvy/.nixpkgs/mozilla/rust-overlay.nix",
+		"/home/havvy/.nixpkgs/shell/voroni.nix",
 		"/home/havvy/.nixpkgs/mozilla/rust-overlay-2.nix",
 		"/home/havvy/.nixpkgs/mozilla/lib/parseTOML.nix",
 		"/home/havvy/.nixpkgs/shell/rust-emscripten.nix",
@@ -356,7 +274,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -370,17 +288,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
-			"check",
-			"CheckCircle",
-			"parabola_at_sweep_location",
-			"with_arc_above_site_mut",
-			"get_left_arc",
-			"CheckCircle",
-			"GetLeftChild",
-			"'sl",
-			"<'sl>",
-			"GetParabolaByX",
-			"sweep_location"
+			"specification"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -398,34 +306,106 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/havvy/workspace/voronoi/src/delaunay.rs",
-					"semi_transient": true,
+					"file": "/home/havvy/workspace/rust/reference/src/items/associated-items.md",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4899,
+						"buffer_size": 7592,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2719,
-								2719
+								6547,
+								6547
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rust/Rust.sublime-syntax",
+							"rulers":
+							[
+								80
+							],
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 570.0,
+						"translation.y": 3558.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/havvy/workspace/rust/reference/src/theme/reference.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1721,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1719,
+								1719
+							]
+						],
+						"settings":
+						{
+							"rulers":
+							[
+								80
+							],
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 414.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/havvy/workspace/rust/reference/src/paths.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3293,
+								3293
+							]
+						],
+						"settings":
+						{
+							"rulers":
+							[
+								80
+							],
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 594.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -436,11 +416,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 54.0
+		"height": 26.0
 	},
 	"input":
 	{
-		"height": 54.0
+		"height": 0.0
 	},
 	"layout":
 	{
@@ -470,10 +450,10 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "voroni.sublime-project",
+	"project": "rust-reference.sublime-project",
 	"replace":
 	{
-		"height": 104.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":

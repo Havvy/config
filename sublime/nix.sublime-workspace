@@ -145,7 +145,7 @@
 			"file": "/home/havvy/.nixpkgs/shell/rust.nix",
 			"settings":
 			{
-				"buffer_size": 815,
+				"buffer_size": 816,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -154,7 +154,7 @@
 			"file": "/home/havvy/.nixpkgs/config.nix",
 			"settings":
 			{
-				"buffer_size": 223,
+				"buffer_size": 198,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -172,7 +172,7 @@
 			"file": "/home/havvy/.nixpkgs/shell/rust-reference.nix",
 			"settings":
 			{
-				"buffer_size": 775,
+				"buffer_size": 778,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -181,7 +181,7 @@
 			"file": "/home/havvy/.bashrc",
 			"settings":
 			{
-				"buffer_size": 388,
+				"buffer_size": 728,
 				"line_ending": "Unix"
 			}
 		},
@@ -196,19 +196,26 @@
 			}
 		},
 		{
-			"file": "/home/havvy/.nixpkgs/mozilla/rust-overlay.nix",
+			"file": "/home/havvy/.nixpkgs/shell/voronoi.nix",
 			"settings":
 			{
-				"buffer_size": 11985,
-				"encoding": "UTF-8",
+				"buffer_size": 816,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/tmp/mozilla_havvy0/channel-rust-beta.toml",
+			"contents": "with import <nixpkgs> {};\n\nstdenv.mkDerivation {\n  name = \"voroni\";\n\n  shellHook = ''\n    # Set some variables for the terminal prompt.\n    green=$(tput setaf 2)\n    bold=$(tput bold)\n    reset=$(tput sgr0) # Resets other styles. Broken in some unknown way?\n\n    # # Everything between \\[ and \\] are considerd as 0 characters long for word-wrap.\n    # \\u is the username.\n    # \\w is the path (relative to ~ if possible)\n    export PS1=\"\\n\\[$green$bold\\][\\u@voroni:\\w]\\$\\[$reset\\] \"\n\n    # Unset the variables used for the terminal prompt.\n    unset green\n    unset bold\n    unset clear\n\n    # Go directly to the Gald directory.\n    cd ~/workspace/voroni\n  '';\n\n  buildInputs = [\n    cmake # Used by emscripten\n    emscripten\n    (rustChannels.stable.rust.override { targets=[\"wasm32-unknown-emscripten\"]; })\n  ];\n}",
 			"settings":
 			{
-				"buffer_size": 160146,
+				"buffer_size": 815,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/etc/nixos/configuration.nix",
+			"settings":
+			{
+				"buffer_size": 2509,
 				"line_ending": "Unix"
 			}
 		},
@@ -225,7 +232,33 @@
 			"file": "/home/havvy/.nixpkgs/shell/gald.nix",
 			"settings":
 			{
-				"buffer_size": 812,
+				"buffer_size": 855,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/.nixpkgs/shell/econ.nix",
+			"settings":
+			{
+				"buffer_size": 715,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/.nixpkgs/shell/mdbook.nix",
+			"settings":
+			{
+				"buffer_size": 721,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/.xbindkeysrc",
+			"settings":
+			{
+				"buffer_size": 1784,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -247,7 +280,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 170.0,
 		"last_filter": "install",
 		"selected_items":
 		[
@@ -292,7 +325,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 401.0
+		"width": 392.0
 	},
 	"console":
 	{
@@ -319,6 +352,10 @@
 	],
 	"file_history":
 	[
+		"/home/havvy/workspace/rust/reference/.travis.yml",
+		"/home/havvy/workspace/rust/project/src/test/COMPILER_TESTS.md",
+		"/tmp/mozilla_havvy0/channel-rust-beta.toml",
+		"/home/havvy/.nixpkgs/mozilla/rust-overlay.nix",
 		"/home/havvy/.nixpkgs/shell/voroni.nix",
 		"/home/havvy/.nixpkgs/mozilla/rust-overlay-2.nix",
 		"/home/havvy/.nixpkgs/mozilla/lib/parseTOML.nix",
@@ -354,7 +391,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -423,7 +460,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -439,8 +476,8 @@
 						"selection":
 						[
 							[
-								2172,
-								2172
+								2615,
+								2615
 							]
 						],
 						"settings":
@@ -451,10 +488,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1380.0,
+						"translation.y": 2100.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -463,20 +500,20 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 815,
+						"buffer_size": 816,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								738,
-								738
+								803,
+								803
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Nix/nix.tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -484,7 +521,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -493,7 +530,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 223,
+						"buffer_size": 198,
 						"regions":
 						{
 						},
@@ -506,13 +543,13 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Nix/nix.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -534,7 +571,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Nix/nix.tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -542,7 +579,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -551,28 +588,28 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 775,
+						"buffer_size": 778,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								775,
-								775
+								518,
+								518
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Nix/nix.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -581,15 +618,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 388,
+						"buffer_size": 728,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								292,
-								292
+								0,
+								0
 							]
 						],
 						"settings":
@@ -600,7 +637,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -623,30 +660,30 @@
 						"settings":
 						{
 							"auto_name": "let",
-							"syntax": "Packages/Nix/nix.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "/home/havvy/.nixpkgs/mozilla/rust-overlay.nix",
+					"file": "/home/havvy/.nixpkgs/shell/voronoi.nix",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11985,
+						"buffer_size": 816,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1976,
-								1976
+								731,
+								765
 							]
 						],
 						"settings":
@@ -656,42 +693,73 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3420.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "/tmp/mozilla_havvy0/channel-rust-beta.toml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 160146,
+						"buffer_size": 815,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1539,
-								1539
+								518,
+								518
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Nix/nix.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 9,
+					"file": "/etc/nixos/configuration.nix",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2509,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2267,
+								2267
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Nix/nix.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1458.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "/home/havvy/.nixpkgs/rust-nightly.nix",
 					"semi_transient": false,
 					"settings":
@@ -709,7 +777,37 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Nix/nix.tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/home/havvy/.nixpkgs/shell/gald.nix",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 855,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								266,
+								266
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -721,12 +819,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "/home/havvy/.nixpkgs/shell/gald.nix",
+					"buffer": 12,
+					"file": "/home/havvy/.nixpkgs/shell/econ.nix",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 812,
+						"buffer_size": 715,
 						"regions":
 						{
 						},
@@ -747,11 +845,69 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/home/havvy/.nixpkgs/shell/mdbook.nix",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 721,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								721,
+								721
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Nix/nix.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/home/havvy/.xbindkeysrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1784,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								621,
+								621
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 15,
 					"file": "/home/havvy/.nixpkgs/shell/tennu.nix",
 					"semi_transient": false,
 					"settings":
@@ -769,7 +925,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Nix/nix.tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -777,7 +933,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 15,
 					"type": "text"
 				}
 			]
@@ -785,7 +941,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -822,7 +978,7 @@
 	"project": "nix.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":

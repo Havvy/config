@@ -22,7 +22,8 @@ stdenv.mkDerivation {
       cd ~/workspace/gald
     '';
     buildInputs = [
-        elixir
+        # elixir
+        beam.packages.erlangR20.elixir
         erlangR20
         nodejs
         idea.idea-community

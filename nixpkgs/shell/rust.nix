@@ -27,6 +27,7 @@ stdenv.mkDerivation {
         curl
         file
         gdb
-        clang
+        #llvm_6
+        nodejs
     ];
 }

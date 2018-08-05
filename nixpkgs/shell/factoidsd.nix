@@ -20,11 +20,11 @@ stdenv.mkDerivation {
     unset clear
 
     # Go directly to the Gald directory.
-    cd ~/workspace/rust/reference
+    cd ~/workspace/factoidsd
   '';
 
   buildInputs = [
     mdbook
-    rustChannels.nightly.rust
+    rustChannels.beta.rust
   ];
 }

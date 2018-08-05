@@ -1,7 +1,7 @@
 with import <nixpkgs> {};
 
 stdenv.mkDerivation {
-  name = "rust-reference";
+  name = "mdbook";
 
   shellHook = ''
     # Set some variables for the terminal prompt.
@@ -12,7 +12,7 @@ stdenv.mkDerivation {
     # # Everything between \[ and \] are considerd as 0 characters long for word-wrap.
     # \u is the username.
     # \w is the path (relative to ~ if possible)
-    export PS1="\n\[$green$bold\][\u@ref:\w]\$\[$reset\] "
+    export PS1="\n\[$green$bold\][\u@mdbook:\w]\$\[$reset\] "
 
     # Unset the variables used for the terminal prompt.
     unset green
@@ -20,11 +20,11 @@ stdenv.mkDerivation {
     unset clear
 
     # Go directly to the Gald directory.
-    cd ~/workspace/rust/reference
+    cd ~/workspace/rust/mdbook
   '';
 
   buildInputs = [
-    mdbook
-    rustChannels.nightly.rust
+    rust.cargo
+    rust.rustc
   ];
 }

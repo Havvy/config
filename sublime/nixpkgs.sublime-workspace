@@ -135,7 +135,7 @@
 			"file": "/home/havvy/workspace/nixpkgs/pkgs/top-level/all-packages.nix",
 			"settings":
 			{
-				"buffer_size": 641164,
+				"buffer_size": 686956,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -144,16 +144,15 @@
 			"file": "/home/havvy/workspace/nixpkgs/pkgs/tools/text/ripgrep/default.nix",
 			"settings":
 			{
-				"buffer_size": 820,
+				"buffer_size": 1272,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/havvy/workspace/nixpkgs/pkgs/development/tools/misc/mdbook/default.nix",
+			"file": "/home/havvy/workspace/nixpkgs/pkgs/tools/text/mdbook/default.nix",
 			"settings":
 			{
-				"buffer_size": 665,
-				"encoding": "UTF-8",
+				"buffer_size": 883,
 				"line_ending": "Unix"
 			}
 		}
@@ -240,6 +239,7 @@
 	],
 	"file_history":
 	[
+		"/home/havvy/workspace/nixpkgs/pkgs/development/tools/misc/mdbook/default.nix",
 		"/home/havvy/workspace/nixpkgs/pkgs/development/tools/mdbook/default.nix",
 		"/home/havvy/workspace/nixpkgs/pkgs/development/web/nodejs/v7.nix",
 		"/home/havvy/scratchspace/new-bind.js",
@@ -273,7 +273,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -353,15 +353,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 641164,
+						"buffer_size": 686956,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								76869,
-								76869
+								100559,
+								100559
 							]
 						],
 						"settings":
@@ -371,7 +371,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 44056.0,
+						"translation.y": 58376.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -383,15 +383,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 820,
+						"buffer_size": 1272,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								202,
-								202
+								481,
+								481
 							]
 						],
 						"settings":
@@ -409,19 +409,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/home/havvy/workspace/nixpkgs/pkgs/development/tools/misc/mdbook/default.nix",
+					"file": "/home/havvy/workspace/nixpkgs/pkgs/tools/text/mdbook/default.nix",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 665,
+						"buffer_size": 883,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								665,
-								665
+								711,
+								711
 							]
 						],
 						"settings":

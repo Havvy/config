@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"dep",
+				"deprecated_function"
+			],
+			[
+				"item",
+				"item"
+			],
+			[
+				"Err",
+				"Erroneous"
+			],
+			[
+				"dyn_",
+				"dyn_trait_send"
+			],
+			[
+				"Ex",
+				"ExistentialPredicate"
+			],
+			[
+				"dedu",
+				"dedup_by"
+			],
+			[
+				"takes_dyn",
+				"takes_dyn_trait_send_sendalias"
+			],
+			[
 				"refcell",
 				"refcell_replace_swap"
 			],
@@ -116,65 +144,145 @@
 	"buffers":
 	[
 		{
-			"file": "/home/havvy/workspace/rust/project/src/doc/unstable-book/src/language-features/lang-items.md",
+			"file": "/home/havvy/.nixpkgs/shell/rust.nix",
 			"settings":
 			{
-				"buffer_size": 11006,
+				"buffer_size": 832,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/havvy/workspace/rust/project/src/libcore/cell.rs",
+			"file": "/home/havvy/scratchspace/rustc-build-logs/2018-05-25-01.log",
 			"settings":
 			{
-				"buffer_size": 38114,
+				"buffer_size": 706851,
+				"encoding": "UTF-8",
+				"line_ending": "CR"
+			}
+		},
+		{
+			"file": "/home/havvy/scratchspace/ty-dynamic.search",
+			"settings":
+			{
+				"buffer_size": 8045,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/havvy/workspace/rust/project/src/libcore/mem.rs",
+			"file": "/home/havvy/workspace/rust/project/src/libsyntax_pos/symbol.rs",
 			"settings":
 			{
-				"buffer_size": 33789,
+				"buffer_size": 21861,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/rust/project/src/libproc_macro/lib.rs",
+			"settings":
+			{
+				"buffer_size": 53070,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/havvy/workspace/rust/project/src/libcore/macros.rs",
+			"file": "/home/havvy/workspace/rust/project/config.toml",
 			"settings":
 			{
-				"buffer_size": 24644,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/havvy/workspace/rust/project/src/libstd/macros.rs",
-			"settings":
-			{
-				"buffer_size": 24976,
+				"buffer_size": 18449,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/havvy/workspace/rust/project/src/libcore/option.rs",
+			"file": "/home/havvy/workspace/rust/project/src/librustc_typeck/astconv.rs",
 			"settings":
 			{
-				"buffer_size": 36381,
+				"buffer_size": 60852,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/rust/project/src/librustc/ty/sty.rs",
+			"settings":
+			{
+				"buffer_size": 70063,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/rust/project/src/libsyntax/diagnostic_list.rs",
+			"settings":
+			{
+				"buffer_size": 9602,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "main () {}",
-			"file": "/home/havvy/workspace/rust/project/build/x86_64-unknown-linux-gnu/llvm/build/CMakeFiles/CMakeTmp/a.c",
-			"file_size": 10,
-			"file_write_time": 131569252745492625,
+			"file": "/home/havvy/workspace/rust/project/src/libsyntax/attr.rs",
 			"settings":
 			{
-				"buffer_size": 10,
+				"buffer_size": 53788,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/rust/project/src/librustc/ty/context.rs",
+			"settings":
+			{
+				"buffer_size": 104892,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/rust/project/src/test/run-pass/trait-object-auto-dedup.rs",
+			"settings":
+			{
+				"buffer_size": 1961,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/rust/project/src/test/ui/trait-object-auto-dedup-in-impl.rs",
+			"settings":
+			{
+				"buffer_size": 895,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/rust/project/src/test/ui/trait-object-auto-dedup-in-impl.stderr",
+			"settings":
+			{
+				"buffer_size": 511,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "// astconv.rs#621\n// \n    fn conv_object_ty_poly_trait_ref(&self,\n        span: Span,\n        trait_bounds: &[hir::PolyTraitRef],\n        lifetime: &hir::Lifetime)\n        -> Ty<'tcx>\n    {\n        let tcx = self.tcx();\n\n        if trait_bounds.is_empty() {\n            span_err!(tcx.sess, span, E0224,\n                      \"at least one non-builtin trait is required for an object type\");\n            return tcx.types.err;\n        }\n\n        let mut projection_bounds = vec![];\n        let dummy_self = tcx.mk_ty(TRAIT_OBJECT_DUMMY_SELF);\n        let principal = self.instantiate_poly_trait_ref(&trait_bounds[0],\n                                                        dummy_self,\n                                                        &mut projection_bounds);\n\n        for trait_bound in trait_bounds[1..].iter() {\n            // Sanity check for non-principal trait bounds\n            self.instantiate_poly_trait_ref(trait_bound,\n                                            dummy_self,\n                                            &mut vec![]);\n        }\n\n        let (auto_traits, trait_bounds) = split_auto_traits(tcx, &trait_bounds[1..]);\n\n        if !trait_bounds.is_empty() {\n            let b = &trait_bounds[0];\n            let span = b.trait_ref.path.span;\n            struct_span_err!(self.tcx().sess, span, E0225,\n                \"only auto traits can be used as additional traits in a trait object\")\n                .span_label(span, \"non-auto additional trait\")\n                .emit();\n        }\n\n        // Erase the dummy_self (TRAIT_OBJECT_DUMMY_SELF) used above.\n        let existential_principal = principal.map_bound(|trait_ref| {\n            self.trait_ref_to_existential(trait_ref)\n        });\n        let existential_projections = projection_bounds.iter().map(|bound| {\n            bound.map_bound(|b| {\n                let trait_ref = self.trait_ref_to_existential(b.projection_ty.trait_ref(tcx));\n                ty::ExistentialProjection {\n                    ty: b.ty,\n                    item_def_id: b.projection_ty.item_def_id,\n                    substs: trait_ref.substs,\n                }\n            })\n        });\n\n        // check that there are no gross object safety violations,\n        // most importantly, that the supertraits don't contain Self,\n        // to avoid ICE-s.\n        let object_safety_violations =\n            tcx.astconv_object_safety_violations(principal.def_id());\n        if !object_safety_violations.is_empty() {\n            tcx.report_object_safety_error(\n                span, principal.def_id(), object_safety_violations)\n                .emit();\n            return tcx.types.err;\n        }\n\n        let mut associated_types = FxHashSet::default();\n        for tr in traits::supertraits(tcx, principal) {\n            associated_types.extend(tcx.associated_items(tr.def_id())\n                .filter(|item| item.kind == ty::AssociatedKind::Type)\n                .map(|item| item.def_id));\n        }\n\n        for projection_bound in &projection_bounds {\n            associated_types.remove(&projection_bound.projection_def_id());\n        }\n\n        for item_def_id in associated_types {\n            let assoc_item = tcx.associated_item(item_def_id);\n            let trait_def_id = assoc_item.container.id();\n            struct_span_err!(tcx.sess, span, E0191,\n                \"the value of the associated type `{}` (from the trait `{}`) must be specified\",\n                        assoc_item.name,\n                        tcx.item_path_str(trait_def_id))\n                        .span_label(span, format!(\n                            \"missing associated type `{}` value\", assoc_item.name))\n                        .emit();\n        }\n\n        // skip_binder is okay, because the predicates are re-bound.\n        let mut v =\n            iter::once(ty::ExistentialPredicate::Trait(*existential_principal.skip_binder()))\n            .chain(auto_traits.into_iter().map(ty::ExistentialPredicate::AutoTrait))\n            .chain(existential_projections\n                   .map(|x| ty::ExistentialPredicate::Projection(*x.skip_binder())))\n            .collect::<AccumulateVec<[_; 8]>>();\n        v.sort_by(|a, b| a.cmp(tcx, b));\n        v.dedup_by(|a, b| a.cmp(tcx, b));\n        let existential_predicates = ty::Binder::bind(tcx.mk_existential_predicates(v.into_iter()));\n\n\n        // Explicitly specified region bound. Use that.\n        let region_bound = if !lifetime.is_elided() {\n            self.ast_region_to_region(lifetime, None)\n        } else {\n            self.compute_object_lifetime_bound(span, existential_predicates).unwrap_or_else(|| {\n                let hir_id = tcx.hir.node_to_hir_id(lifetime.id);\n                if tcx.named_region(hir_id).is_some() {\n                    self.ast_region_to_region(lifetime, None)\n                } else {\n                    self.re_infer(span, None).unwrap_or_else(|| {\n                        span_err!(tcx.sess, span, E0228,\n                                  \"the lifetime bound for this object type cannot be deduced \\\n                                   from context; please supply an explicit bound\");\n                        tcx.types.re_static\n                    })\n                }\n            })\n        };\n\n        debug!(\"region_bound: {:?}\", region_bound);\n\n        let ty = tcx.mk_dynamic(existential_predicates, region_bound);\n        debug!(\"trait_object_type: {:?}\", ty);\n        ty\n    }",
+			"settings":
+			{
+				"buffer_size": 5417,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/rust/project/src/test/ui-fulldeps/invalid-punct-ident-1.rs",
+			"settings":
+			{
+				"buffer_size": 600,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/havvy/workspace/rust/project/src/test/ui-fulldeps/auxiliary/invalid-punct-ident.rs",
+			"settings":
+			{
+				"buffer_size": 1144,
 				"line_ending": "Unix"
 			}
 		}
@@ -231,10 +339,31 @@
 	[
 		"/home/havvy/workspace/rust/project",
 		"/home/havvy/workspace/rust/project/src",
-		"/home/havvy/workspace/rust/project/src/libcore"
+		"/home/havvy/workspace/rust/project/src/librustc",
+		"/home/havvy/workspace/rust/project/src/libsyntax",
+		"/home/havvy/workspace/rust/project/src/test",
+		"/home/havvy/workspace/rust/project/src/test/ui",
+		"/home/havvy/workspace/rust/project/src/test/ui/type-check"
 	],
 	"file_history":
 	[
+		"/home/havvy/workspace/rust/project/src/test/run-pass/rfc-2421-unreserve-pure-offsetof-sizeof-alignof.rs",
+		"/home/havvy/workspace/rust/project/src/test/run-pass/trait-object-auto-dedup-in-impl.rs",
+		"/home/havvy/workspace/rust/project/src/test/parse-fail/removed-syntax-fn-pure.rs",
+		"/home/havvy/workspace/rust/project/src/libcore/option.rs",
+		"/home/havvy/workspace/rust/project/src/libcore/mem.rs",
+		"/home/havvy/workspace/rust/project/src/libcore/cell.rs",
+		"/home/havvy/workspace/rust/project/src/libcore/macros.rs",
+		"/home/havvy/workspace/rust/project/src/libstd/macros.rs",
+		"/home/havvy/workspace/rust/project/build/x86_64-unknown-linux-gnu/llvm/build/CMakeFiles/CMakeTmp/a.c",
+		"/home/havvy/workspace/rust/project/build/x86_64-unknown-linux-gnu/llvm/build/LLVMBuild.cmake",
+		"/home/havvy/workspace/rust/project/build/x86_64-unknown-linux-gnu/llvm/build/cmake_install.cmake",
+		"/home/havvy/scratchspace/rust-build.log",
+		"/home/havvy/workspace/rust/project/src/doc/unstable-book/src/language-features/lang-items.md",
+		"/home/havvy/scratchspace/test-stage1-04.txt",
+		"/home/havvy/scratchspace/test-stage1-05.txt",
+		"/home/havvy/scratchspace/test-stage1.txt",
+		"/home/havvy/scratchspace/test-stage1-03.txt",
 		"/home/havvy/workspace/rust/project/build/x86_64-unknown-linux-gnu/llvm/build/CMakeFiles/CMakeError.log",
 		"/home/havvy/workspace/rust/project/build/x86_64-unknown-linux-gnu/llvm/build/CMakeFiles/CMakeOutput.log",
 		"/home/havvy/workspace/rust/project/src/doc/unstable-book/src/the-unstable-book.md",
@@ -243,7 +372,6 @@
 		"/home/havvy/workspace/rust/project/src/libcore/ops/unsize.rs",
 		"/home/havvy/workspace/rust/project/src/libcore/ptr.rs",
 		"/home/havvy/workspace/rust/project/src/libcore/marker.rs",
-		"/home/havvy/workspace/rust/project/src/libcore/mem.rs",
 		"/home/havvy/workspace/rust/project/src/liblibc/src/dox.rs",
 		"/home/havvy/workspace/rust/project/src/test/run-pass/impl-inherent-non-conflict.rs",
 		"/home/havvy/workspace/rust/project/src/test/run-pass/impl-implicit-trait.rs",
@@ -271,7 +399,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -285,6 +413,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"MultipleItem",
+			"that",
+			"ExistentialPredicate",
+			"auto_traits",
+			"split_auto_traits",
+			"ExistentialPredicat",
+			"split_auto_traits",
+			"conv_object_ty_poly_trait_ref",
+			"keywords",
+			"Symbol",
+			"empty",
 			"test",
 			"`cfg",
 			"fn replace",
@@ -335,112 +474,110 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/havvy/workspace/rust/project/src/doc/unstable-book/src/language-features/lang-items.md",
+					"file": "/home/havvy/.nixpkgs/shell/rust.nix",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11006,
+						"buffer_size": 832,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8152,
-								8152
+								754,
+								754
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"syntax": "Packages/Nix/nix.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3796.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/home/havvy/workspace/rust/project/src/libcore/cell.rs",
+					"file": "/home/havvy/scratchspace/rustc-build-logs/2018-05-25-01.log",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 38114,
+						"buffer_size": 706851,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								706851,
+								706851
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rust/Rust.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 10570.0,
+						"translation.y": 132607.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/home/havvy/workspace/rust/project/src/libcore/mem.rs",
+					"file": "/home/havvy/scratchspace/ty-dynamic.search",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 33789,
+						"buffer_size": 8045,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6304,
-								6304
+								3886,
+								3886
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rust/Rust.sublime-syntax"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 3190.0,
+						"translation.y": 378.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "/home/havvy/workspace/rust/project/src/libcore/macros.rs",
+					"file": "/home/havvy/workspace/rust/project/src/libsyntax_pos/symbol.rs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 24644,
+						"buffer_size": 21861,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								12488,
+								12488
 							]
 						],
 						"settings":
@@ -450,87 +587,309 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 10605.0,
+						"translation.y": 6601.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/havvy/workspace/rust/project/src/libproc_macro/lib.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 53070,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2241,
+								2241
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rust/Rust.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 589.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/havvy/workspace/rust/project/config.toml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12270,
+								12270
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 198900.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/havvy/workspace/rust/project/src/librustc_typeck/astconv.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 60852,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29896,
+								29896
+							]
+						],
+						"settings":
+						{
+							"rulers":
+							[
+								100
+							],
+							"syntax": "Packages/Rust/Rust.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 12271.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "/home/havvy/workspace/rust/project/src/libstd/macros.rs",
+					"buffer": 7,
+					"file": "/home/havvy/workspace/rust/project/src/librustc/ty/sty.rs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 24976,
+						"buffer_size": 70063,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								18603,
+								18603
 							]
 						],
 						"settings":
 						{
+							"rulers":
+							[
+								100
+							],
 							"syntax": "Packages/Rust/Rust.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5007.0,
+						"translation.y": 8599.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "/home/havvy/workspace/rust/project/src/libcore/option.rs",
+					"buffer": 8,
+					"file": "/home/havvy/workspace/rust/project/src/libsyntax/diagnostic_list.rs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 36381,
+						"buffer_size": 9602,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2481,
+								2481
 							]
 						],
 						"settings":
 						{
+							"rulers":
+							[
+								80
+							],
 							"syntax": "Packages/Rust/Rust.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 11361.0,
+						"translation.y": 1479.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "/home/havvy/workspace/rust/project/build/x86_64-unknown-linux-gnu/llvm/build/CMakeFiles/CMakeTmp/a.c",
-					"semi_transient": false,
+					"buffer": 9,
+					"file": "/home/havvy/workspace/rust/project/src/libsyntax/attr.rs",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 10,
+						"buffer_size": 53788,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10,
-								10
+								22252,
+								22252
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rust/Rust.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/home/havvy/workspace/rust/project/src/librustc/ty/context.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 104892,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								91602,
+								91602
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rust/Rust.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 44887.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/home/havvy/workspace/rust/project/src/test/run-pass/trait-object-auto-dedup.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1961,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1961,
+								1961
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rust/Rust.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 94.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/home/havvy/workspace/rust/project/src/test/ui/trait-object-auto-dedup-in-impl.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 895,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								635,
+								635
+							]
+						],
+						"settings":
+						{
+							"rulers":
+							[
+								100
+							],
+							"syntax": "Packages/Rust/Rust.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/home/havvy/workspace/rust/project/src/test/ui/trait-object-auto-dedup-in-impl.stderr",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								511,
+								511
 							]
 						],
 						"settings":
@@ -541,7 +900,92 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4192,
+								4192
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rust/Rust.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1219.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "/home/havvy/workspace/rust/project/src/test/ui-fulldeps/invalid-punct-ident-1.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 600,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								600,
+								600
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rust/Rust.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "/home/havvy/workspace/rust/project/src/test/ui-fulldeps/auxiliary/invalid-punct-ident.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								704,
+								704
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rust/Rust.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
 					"type": "text"
 				}
 			]
